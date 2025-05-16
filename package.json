@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
@@ -13,7 +12,7 @@
     "vite": "^6.3.5"
   },
   "dependencies": {
-    "swgpu": "^1.8.4",
+    "swgpu": "^1.8.5",
     "vite-plugin-top-level-await": "^1.5.0"
   }
 }

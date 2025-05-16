@@ -13,9 +13,10 @@
       {
         "title": "Mon application 3D",
         "width": 620,
-        "height": 600,
+        "height": 620,
         "resizable": false,
-        "fullscreen": false
+        "fullscreen": false,
+        "maximizable": false
       }
     ],
     "security": {
