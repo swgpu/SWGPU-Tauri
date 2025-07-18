@@ -1,4 +1,5 @@
 import {
+  gfx3Manager,
   gfx3DebugRenderer,
   gfx3MeshRenderer,
   EnginePack3D,
@@ -46,6 +47,15 @@ class GameScreen extends Screen {
     this.pack.jsm.forEach(item => item.object.draw());
     gfx3MeshRenderer.setAmbientColor([0.5, 0.5, 0.5]);
     gfx3DebugRenderer.drawGrid(UT.MAT4_ROTATE_X(Math.PI * 0.5), 20, 1);
+  }
+
+  render(ts: number) {
+    gfx3Manager.beginRender();
+    gfx3Manager.beginPassRender(0);
+    gfx3DebugRenderer.render();
+    gfx3MeshRenderer.render(ts);
+    gfx3Manager.endPassRender();
+    gfx3Manager.endRender();
   }
 }
 
